@@ -52,3 +52,11 @@ $feature: min-width;
         }
     }
 }
+
+@mixin left(){
+    float: left;
+}
+
+@mixin right(){
+    float: right;
+}

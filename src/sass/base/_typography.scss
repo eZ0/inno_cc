@@ -1,9 +1,16 @@
+@import url(http://fonts.googleapis.com/css?family=Varela);
+body {
+	font-family: 'Varela', sans-serif;
+	color: $dove;
+}
+
 h1 {
 	font-size: $h1;
 }
 
 h4 {
 	font-size: $h4;
+	line-height: 48px;
 }
 
 p { 
@@ -11,5 +18,10 @@ p {
 }
 
 h1, h4, strong {
+	color: $timberwolf;
 	font-weight: 700;
+}
+
+.links {
+	font-size: $p;
 }

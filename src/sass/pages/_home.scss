@@ -18,3 +18,45 @@
 	height: 100%;
 	background-color: $dove;
 }
+
+.content {
+	@include pad(0px 64px);
+	@include row();
+}
+
+img {
+	@include clearfix;
+}
+
+.slider {
+	@include span-columns(8);
+	
+	.image {
+		width: flex-grid(4);
+		margin-top: 20px;
+		@include clearfix;
+		@include left;
+		.arrows {
+			margin: 120px 0;
+		}
+	}
+	.text {
+		width: flex-grid(5);
+		overflow: hidden;
+		padding: 0;
+		margin: 80px 20px 0 20px;
+		@include clearfix;
+		.arrows{
+			margin: 80px 0 0 30px;
+			transform: scaleX(-1);
+        		filter: FlipH;
+			@include right;
+		}
+	}	
+}
+
+
+.links {
+	@include span-columns(3);
+	margin: 80px 0 0 0;
+}

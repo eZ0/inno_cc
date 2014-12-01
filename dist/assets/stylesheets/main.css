@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Varela);
 /**
  *
  * More info about this architecture can be found here:
@@ -55,17 +56,26 @@ table {
 *, *:before, *:after {
   box-sizing: border-box; }
 
+body {
+  font-family: 'Varela', sans-serif;
+  color: #747474; }
+
 h1 {
   font-size: 48px; }
 
 h4 {
-  font-size: 18px; }
+  font-size: 18px;
+  line-height: 48px; }
 
 p {
   line-height: 24px; }
 
 h1, h4, strong {
+  color: #4e4e4e;
   font-weight: 700; }
+
+.links {
+  font-size: 13px; }
 
 .right {
   float: right; }
@@ -113,4 +123,60 @@ h1, h4, strong {
 .image-group {
   height: 100%;
   background-color: #747474; }
+
+.content {
+  padding: 0px 64px;
+  display: block; }
+  .content:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+img:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.slider {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 66.66667%; }
+  .slider:last-child {
+    margin-right: 0; }
+  .slider .image {
+    width: 40%;
+    margin-top: 20px;
+    float: left; }
+    .slider .image:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .slider .image .arrows {
+      margin: 120px 0; }
+  .slider .text {
+    width: 50%;
+    overflow: hidden;
+    padding: 0;
+    margin: 80px 20px 0 20px; }
+    .slider .text:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .slider .text .arrows {
+      margin: 80px 0 0 30px;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      -webkit-filter: FlipH;
+      filter: FlipH;
+      float: right; }
+
+.links {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 25%;
+  margin: 80px 0 0 0; }
+  .links:last-child {
+    margin-right: 0; }
 
