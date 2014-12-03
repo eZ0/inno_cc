@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink"
-	width="11px" height="19px">
-<path fill="rgb(223,223,223)" fill-rule="evenodd" d="M2.21 9.50 C2.21 9.50 10.50 17.88 10.50 17.88 C10.50 17.88 9.39 19.00 9.39 19.00 C9.39 19.00 -0.00 9.50 -0.00 9.50 C-0.00 9.50 9.39 -0.00 9.39 -0.00 C9.39 -0.00 10.50 1.12 10.50 1.12 C10.50 1.12 2.21 9.50 2.21 9.50 Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="11" height="19"><path fill="#dfdfdf" fill-rule="evenodd" d="M2.21 9.5l8.29 8.38L9.39 19 0 9.5 9.39 0l1.11 1.12L2.21 9.5z"/></svg>
