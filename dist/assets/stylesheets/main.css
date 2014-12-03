@@ -97,6 +97,14 @@ h1, h4, strong {
     .top-bar ul li {
       float: left;
       padding: 0 15px; }
+      .top-bar ul li:hover, .top-bar ul li:focus {
+        color: #199b8c; }
+
+.sub_item {
+  display: none;
+  color: #747474; }
+  .sub_item:hover, .sub_item:focus {
+    color: #199b8c; }
 
 .wrap {
   padding: 30px;
@@ -112,6 +120,13 @@ h1, h4, strong {
   width: auto !important; }
   .menu-group ul {
     padding: 16px 0; }
+
+/*********Hover*********/
+.top-bar li:nth-of-type(4):hover, .top-bar li:nth-of-type(4):focus {
+  margin-top: -15px; }
+  .top-bar li:nth-of-type(4):hover .sub_item, .top-bar li:nth-of-type(4):focus .sub_item {
+    display: block;
+    margin-top: 15px; }
 
 .header-img {
   background-image: url("../images/h_man.png");

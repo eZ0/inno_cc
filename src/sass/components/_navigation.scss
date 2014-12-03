@@ -15,9 +15,23 @@
 		li {
 			float:left;
 			padding: 0 15px;
+			&:hover,
+			&:focus {
+				color: $aquamarine;
+			}
 		}
 	}
 }
+
+.sub_item {
+	display: none;
+	color: $dove;
+	&:hover,
+	&:focus {
+		color: $aquamarine;
+	}
+}
+
 .wrap {
 	padding: 30px;
 	margin: 0 47px;
@@ -36,3 +50,20 @@
 		padding: 16px 0; 
 	}
 }
+
+/*********Hover*********/
+.top-bar {
+	li:nth-of-type(4){
+		&:hover,
+		&:focus{
+			margin-top: -15px;
+			.sub_item{
+				display: block;
+				margin-top: 15px;
+			}
+		}
+	}
+}
+
+
+
