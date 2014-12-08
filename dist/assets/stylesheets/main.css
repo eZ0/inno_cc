@@ -309,9 +309,12 @@ img:after {
   display: block;
   width: 16.66667%; }
   .aside-nav li {
-    margin: 8px 0; }
+    margin: 5px 0; }
   .aside-nav:last-child {
     width: 16.66667%; }
+
+.border {
+  text-align: left; }
 
 main {
   display: block; }
@@ -371,7 +374,7 @@ footer {
 .footer-wrap {
   position: absolute;
   left: 0;
-  bottom: 30px; }
+  bottom: 10px; }
 
 .footer-aside {
   text-align: center;
@@ -386,6 +389,7 @@ footer {
 .footer-content {
   color: #a2a2a2;
   font-weight: 100;
+  max-width: 330px;
   float: left;
   display: block;
   width: 83.33333%; }

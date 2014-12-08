@@ -7,9 +7,12 @@
 	float: left;
 	margin-top: 18px;
 	li {
-		margin: 8px 0;
+		margin: 5px 0;
 	}
 	@include span-columns(2, 'block-collapse');
+}
+.border {
+	text-align: left;
 }
 
 //main content styling
@@ -66,7 +69,7 @@ footer {
 .footer-wrap {
 	position: absolute;
 	left: 0;
-	bottom: 30px;
+	bottom: 10px;
 }
 
 .footer-aside {
@@ -79,5 +82,6 @@ footer {
 .footer-content {
 	color: $coala;
 	font-weight: 100;
+	max-width: 330px; 
 	@include span-columns(10, 'block-collapse');
 }
