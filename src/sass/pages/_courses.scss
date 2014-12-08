@@ -1,13 +1,31 @@
 //specific styleshees for courses page
 
 //aside navigation styles
-
+.aside-nav {
+	text-align: center;
+	color: $coala;
+	float: left;
+	margin-top: 18px;
+	li {
+		margin: 8px 0;
+	}
+	@include span-columns(2, 'block-collapse');
+}
 
 //main content styling
+main {
+	@include row();
+	h2 {
+		margin-bottom: 40px;
+	}
+}
+.courses-content{
+	@include span-columns(10, 'block-collapse');
+}
 .breadcrumb {
 	font-size: 16px;
 	max-width: 12.4em;
-	margin: 40px 0 20px 0;
+	margin: 0px 0 20px 0;
 }
 .link-arrow {
 	@include right;
