@@ -1,9 +1,12 @@
 //specific styleshees for courses page
 
+//aside navigation styles
+
+
 //main content styling
 .breadcrumb {
 	font-size: 16px;
-	max-width: 200px;
+	max-width: 12.4em;
 	margin: 40px 0 20px 0;
 }
 .link-arrow {
@@ -29,4 +32,22 @@
 }
 .prof-info {
 	margin: 30px 0;
+}
+
+//footer
+footer {
+	background-image: url("../images/footer_paint.png");
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 300px;
+	height: 250px;
+	position: relative;
+}
+
+.footer-content {
+	position: absolute;
+	bottom: 30px; 
+	left: 0;
+	color: $coala;
+	font-weight: 100;
 }

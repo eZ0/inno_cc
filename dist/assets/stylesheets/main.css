@@ -98,6 +98,9 @@ h1, h4, strong {
   h1:hover, h1:focus, h4:hover, h4:focus, strong:hover, strong:focus {
     color: #199b8c; }
 
+small {
+  font-size: 13px; }
+
 a {
   text-decoration: none;
   color: inherit; }
@@ -299,7 +302,7 @@ img:after {
 
 .breadcrumb {
   font-size: 16px;
-  max-width: 200px;
+  max-width: 12.4em;
   margin: 40px 0 20px 0; }
 
 .link-arrow {
@@ -322,4 +325,19 @@ img:after {
 
 .prof-info {
   margin: 30px 0; }
+
+footer {
+  background-image: url("../images/footer_paint.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 300px;
+  height: 250px;
+  position: relative; }
+
+.footer-content {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  color: #a2a2a2;
+  font-weight: 100; }
 
