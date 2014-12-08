@@ -82,6 +82,5 @@ footer {
 .footer-content {
 	color: $coala;
 	font-weight: 100;
-	max-width: 330px; 
 	@include span-columns(10, 'block-collapse');
 }
