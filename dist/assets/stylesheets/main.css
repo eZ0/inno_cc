@@ -361,12 +361,34 @@ footer {
   background-position: right center;
   background-size: 300px;
   height: 250px;
-  position: relative; }
+  position: relative;
+  display: block; }
+  footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.footer-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 30px; }
+
+.footer-aside {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  float: left;
+  display: block;
+  width: 16.66667%; }
+  .footer-aside:last-child {
+    width: 16.66667%; }
 
 .footer-content {
-  position: absolute;
-  bottom: 30px;
-  left: 0;
   color: #a2a2a2;
-  font-weight: 100; }
+  font-weight: 100;
+  float: left;
+  display: block;
+  width: 83.33333%; }
+  .footer-content:last-child {
+    width: 83.33333%; }
 
