@@ -6,12 +6,29 @@ body {
 
 h1 {
 	font-size: $h1;
-	line-height: $h1;
+	line-height: $line;
+	margin-bottom: 10px;
+}
+
+h2 {
+	text-align: center; 
+	color: $coala;
+	font-weight: 100;
+	font-size: $h2;
+	line-height: $line;
+}
+
+h3 {
+	font-size: $h3;
+	line-height: $line;
+	color: $timberwolf;
+	font-weight: 700;
+	margin-bottom: 20px;
 }
 
 h4 {
 	font-size: $h4;
-	line-height: $h1;
+	line-height: $line;
 }
 
 p { 
@@ -25,6 +42,11 @@ h1, h4, strong {
 	&:focus {
 		color: $aquamarine;
 	}
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
 .links {

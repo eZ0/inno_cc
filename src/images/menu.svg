@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="24px" height="16px">
+<path fill="rgb(115,115,115)" fill-rule="evenodd" d="M 0 16C 0 16 0 14 0 14 0 14 24 14 24 14 24 14 24 16 24 16 24 16 0 16 0 16ZM 0 7C 0 7 24 7 24 7 24 7 24 9 24 9 24 9 0 9 0 9 0 9 0 7 0 7ZM 0-0C 0-0 24-0 24-0 24-0 24 2 24 2 24 2 0 2 0 2 0 2 0-0 0-0Z"/>
+</svg>

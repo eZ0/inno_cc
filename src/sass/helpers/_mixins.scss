@@ -43,11 +43,11 @@ $feature: min-width;
             @content;
         }
     } @else if $breakpoint == n { // note
-        @media #{$media} and ($feature: 643px) {
+        @media #{$media} and ($feature: 768px) {
             @content;
         }
     } @else if $breakpoint == fb { // facebook duh!
-        @media #{$media} and ($feature: 800px) {
+        @media #{$media} and ($feature: 960px) {
             @content;
         }
     }

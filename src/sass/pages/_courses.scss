@@ -1,0 +1,32 @@
+//specific styleshees for courses page
+
+//main content styling
+.breadcrumb {
+	font-size: 16px;
+	max-width: 200px;
+	margin: 40px 0 20px 0;
+}
+.link-arrow {
+	@include right;
+	margin-top: 5px;
+	.arrow_green{
+		display: none;
+	}
+}	
+.sub-category {
+	color: $coala;
+	font-size: 16px;
+	padding: 0 0 0 50px;
+}
+
+.link-univ {
+	max-width: 150px;
+	padding: 10px 0 18px 0;
+}
+
+.course-info {
+	margin: 20px 0;
+}
+.prof-info {
+	margin: 30px 0;
+}

@@ -7,7 +7,7 @@
  */
 /******COLOR******/
 /******FONT_SIZES******/
-/******Z-INDEXES******/
+/******SCREEN_SIZES******/
 .border-box {
   box-sizing: border-box; }
 
@@ -16,6 +16,12 @@
 
 .hidden {
   display: none; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
 
 * {
   box-sizing: border-box; }
@@ -62,11 +68,26 @@ body {
 
 h1 {
   font-size: 48px;
-  line-height: 48px; }
+  line-height: 0.9;
+  margin-bottom: 10px; }
+
+h2 {
+  text-align: center;
+  color: #a2a2a2;
+  font-weight: 100;
+  font-size: 34px;
+  line-height: 0.9; }
+
+h3 {
+  font-size: 21px;
+  line-height: 0.9;
+  color: #4e4e4e;
+  font-weight: 700;
+  margin-bottom: 20px; }
 
 h4 {
   font-size: 18px;
-  line-height: 48px; }
+  line-height: 0.9; }
 
 p {
   line-height: 24px; }
@@ -77,23 +98,24 @@ h1, h4, strong {
   h1:hover, h1:focus, h4:hover, h4:focus, strong:hover, strong:focus {
     color: #199b8c; }
 
+a {
+  text-decoration: none;
+  color: inherit; }
+
 .links {
   font-size: 13px; }
   .links p {
     line-height: 21px; }
 
-.right {
-  float: right; }
-
-.left {
-  float: left; }
-
 .top-bar {
   height: 100px; }
   .top-bar ul {
-    width: auto;
+    width: 100%;
     height: auto !important;
     display: inline; }
+    @media screen and (min-width: 960px) {
+      .top-bar ul {
+        width: auto; } }
     .top-bar ul li {
       float: left;
       padding: 0 15px; }
@@ -107,8 +129,8 @@ h1, h4, strong {
     color: #199b8c; }
 
 .wrap {
-  padding: 30px;
-  margin: 0 47px;
+  padding: 30px 0px;
+  margin: 0 40px;
   width: auto;
   height: auto; }
 
@@ -116,8 +138,15 @@ h1, h4, strong {
   margin: 0; }
 
 .menu-group {
-  position: relative;
-  width: auto !important; }
+  display: none; }
+  .menu-group li:nth-of-type(8) {
+    display: inline !important;
+    width: auto !important; }
+  @media screen and (min-width: 960px) {
+    .menu-group {
+      display: block;
+      position: relative;
+      width: auto !important; } }
   .menu-group ul {
     padding: 16px 0; }
 
@@ -127,6 +156,15 @@ h1, h4, strong {
   .top-bar li:nth-of-type(4):hover .sub_item, .top-bar li:nth-of-type(4):focus .sub_item {
     display: block;
     margin-top: 15px; }
+
+/********MENU_ICON*********/
+li#menu-icon.toggle-topbar.menu-icon, li#search-icon.toggle-topbar.search-icon {
+  display: inline-block;
+  padding-top: 16px;
+  float: right; }
+  @media screen and (min-width: 960px) {
+    li#menu-icon.toggle-topbar.menu-icon, li#search-icon.toggle-topbar.search-icon {
+      display: none; } }
 
 .header-img {
   background-image: url("../images/h_man.png");
@@ -170,12 +208,16 @@ img:after {
   clear: both; }
 
 .slider {
-  float: left;
-  display: block;
-  margin-right: 0%;
-  width: 75%; }
-  .slider:last-child {
-    margin-right: 0; }
+  width: 100%; }
+  @media screen and (min-width: 960px) {
+    .slider {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 75%;
+      max-width: 992px; }
+      .slider:last-child {
+        margin-right: 0; } }
   .slider .image {
     margin: 30px 30px 0 0;
     float: left; }
@@ -204,15 +246,35 @@ img:after {
 .right {
   float: right; }
 
+.slider-content {
+  overflow: hidden;
+  position: relative;
+  height: 311px; }
+  .slider-content #slider {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: auto !important; }
+    .slider-content #slider li {
+      position: relative;
+      float: left; }
+
 /*********Links********/
 .links {
-  float: left;
-  display: block;
-  margin-right: 0%;
-  width: 25%;
-  margin: 80px 0 0 0; }
-  .links:last-child {
-    margin-right: 0; }
+  width: 100%;
+  margin: 0; }
+  @media screen and (min-width: 960px) {
+    .links {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 25%;
+      margin: 80px 0 0 0; }
+      .links:last-child {
+        margin-right: 0; } }
+  .links .link {
+    float: right;
+    margin-right: 2.3em; }
 
 .link {
   max-width: 260px;
@@ -234,4 +296,30 @@ img:after {
   display: none; }
 .link:hover .arrow_green {
   display: inline-block; }
+
+.breadcrumb {
+  font-size: 16px;
+  max-width: 200px;
+  margin: 40px 0 20px 0; }
+
+.link-arrow {
+  float: right;
+  margin-top: 5px; }
+  .link-arrow .arrow_green {
+    display: none; }
+
+.sub-category {
+  color: #a2a2a2;
+  font-size: 16px;
+  padding: 0 0 0 50px; }
+
+.link-univ {
+  max-width: 150px;
+  padding: 10px 0 18px 0; }
+
+.course-info {
+  margin: 20px 0; }
+
+.prof-info {
+  margin: 30px 0; }
 

@@ -21,20 +21,21 @@
 			<div class="wrap">
 				<section class="logo-group">
 					<ul class="left">
-						<li><a href="#"><img src="assets/images/logo.png"></a></li>
-						<li class="toggle-topbar menu-icon"><a href="#"></a></li>
+						<li><a href="index.html"><img src="assets/images/logo.png"></a></li>
+						<li class="toggle-topbar search-icon" id="search-icon"><img src="assets/images/icon_search.png"></li>
+						<li class="toggle-topbar menu-icon" id="menu-icon"><a href="#"><img src="assets/images/menu.svg"></a></li>
 					</ul>
 				</section>
-				<section class="menu-group">
+				<section class="menu-group" id="menu">
 					<ul class="right">
-						<li>Home</li>
-						<li>About</li>
-						<li>Clients</li>
-						<li>Institute <span class="sub_item">Courses</span></li>
-						<li>People</li>
-						<li>Jobs</li>
-						<li>Contact</li>
-						<li><img src="assets/images/icon_search.png"></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Clients</a></li>
+						<li><a href="#">Institute</a><span class="sub_item"><a href="courses.html">Courses</a></span></li>
+						<li><a href="#">People</a></li>
+						<li><a href="#">Jobs</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#"><img src="assets/images/icon_search.png"></a></li>
 					</ul>
 				</section>
 			</div> 
@@ -53,20 +54,42 @@
 		</section>
 		<div class="content">
 			<section class="slider">
-				<div class="slide-arrow left">
+				<div class="slide-arrow left" id="prev">
 					<img class="arrows" src="assets/images/arrow.svg">
 				</div>
-				<div class="slide-arrow right">
+				<div class="slide-arrow right" id="next">
 					<img class="arrows flip" src="assets/images/arrow.svg">
 				</div>
-				<div class="slide-content">
-					<div class="image">
-						<img src="assets/images/paint.png">
-					</div>
-					<div class="text">
-						<h4>Highlight Title #01</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend neque enim, sed mollis ex vehicula a. Cras sagittis, dolor vel lacinia auctor, quam ipsum viverra felis, a luctus quam justo at nisl.</p>
-					</div>
+				<div class="slider-content">
+					<ul id="slider">
+						<li>
+							<div class="image">
+								<img src="assets/images/paint.png">
+							</div>
+							<div class="text">
+								<h4>Highlight Title #01</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend neque enim, sed mollis ex vehicula a. Cras sagittis, dolor vel lacinia auctor, quam ipsum viverra felis, a luctus quam justo at nisl.</p>
+							</div>
+						</li>
+						<li>
+							<div class="image">
+								<img src="assets/images/paint.png">
+							</div>
+							<div class="text">
+								<h4>Highlight Title #02</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend neque enim, sed mollis ex vehicula a. Cras sagittis, dolor vel lacinia auctor, quam ipsum viverra felis, a luctus quam justo at nisl.</p>
+							</div>
+						</li>
+						<li>
+							<div class="image">
+								<img src="assets/images/paint.png">
+							</div>
+							<div class="text">
+								<h4>Highlight Title #03</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend neque enim, sed mollis ex vehicula a. Cras sagittis, dolor vel lacinia auctor, quam ipsum viverra felis, a luctus quam justo at nisl.</p>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</section>
 			<section class="links">
@@ -99,6 +122,8 @@
 				</div>
 			</section>
 		</div>
+		<!-- <div id="result">Click an element.</div> -->
+
 	</main>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

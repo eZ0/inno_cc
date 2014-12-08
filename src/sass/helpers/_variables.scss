@@ -15,11 +15,19 @@ $mice: #f8f8f8; // header bg
 /******FONT_SIZES******/
 $base: 16px;
 $h1: 48px;
-$h2:;
-$h3:;
+$h2: 34px;
+$h3: 21px;
 $h4: 18px;
 $p: 13px;
+$line: 0.9;
+
+/******SCREEN_SIZES******/
+$catelyn: 1140px;
+$robb: 960px;
+$sansa: 768px;
+$arya: 480px; // landscape
+$bran: 480px; // portait
+$rickon: 320px;
 
 
-/******Z-INDEXES******/
 
