@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-
+	console.log('Ready!');
     //1. set ul width 
     //2. image when click prev/next button
     var ul;
@@ -102,4 +102,16 @@ $( document ).ready(function() {
     document.getElementById('menu-icon').onclick = function() {
         changeClass(this, 'menu-icon active', 'menu-icon', 'menu');
     };
+
+    // modal 
+    //$('#sidemenu').modal('hide');
+    //$('#sidemenu').modal('toggle');
+
+    document.getElementById('aside-nav').onclick = function() {
+    	$('#sidemenu').modal('toggle');
+    };
+       document.getElementById('sidemenu').onclick = function() {
+    	$('#sidemenu').modal('hide');
+    };
+
 });

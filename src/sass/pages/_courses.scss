@@ -44,12 +44,18 @@
 			}
 		}
 		@include span-columns(12, 'block-collapse');
+		@include media($catelyn) {
+			padding-top: 190px;
+		}
 	}
 }
 
 .close {
 	cursor: pointer;
 	padding: 7em 0 1.5em 2.45em;
+	@include media($catelyn) {
+		display: none;
+	}
 }
 
 // aside navigation styles

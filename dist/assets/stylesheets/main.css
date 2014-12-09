@@ -451,10 +451,16 @@ img:after {
           width: 75%; } }
   .modal .aside-nav:last-child {
     width: 100%; }
+  @media screen and (min-width: 1140px) {
+    .modal .aside-nav {
+      padding-top: 190px; } }
 
 .close {
   cursor: pointer;
   padding: 7em 0 1.5em 2.45em; }
+  @media screen and (min-width: 1140px) {
+    .close {
+      display: none; } }
 
 .aside-nav {
   text-align: center;
