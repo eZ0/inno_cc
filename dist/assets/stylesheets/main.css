@@ -412,6 +412,9 @@ img:after {
   width: 100%; }
   .modal .aside-nav a:after {
     content: attr(data-alt); }
+  @media screen and (min-width: 1140px) {
+    .modal .aside-nav .border a:after {
+      content: attr(data-year); } }
   .modal .aside-nav .point {
     padding: 10px 0 5px 7.5%;
     font-size: 13px; }

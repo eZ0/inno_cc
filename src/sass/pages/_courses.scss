@@ -9,6 +9,13 @@
 		a:after {
 			content: attr(data-alt);
 		}
+		.border {
+			a:after {
+				@include media($catelyn) {
+					content: attr(data-year);
+				}
+			}
+		}
 		.point{
 			padding: 10px 0 5px 7.5%;
 			font-size: $p;
