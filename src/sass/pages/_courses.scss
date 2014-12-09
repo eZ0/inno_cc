@@ -1,5 +1,6 @@
 //specific styleshees for courses page
 
+
 //aside navigation styles
 .aside-nav {
 	text-align: center;
@@ -10,20 +11,62 @@
 		margin: 5px 0;
 	}
 	@include span-columns(2, 'block-collapse');
+	@include media($sansa) {
+		margin-top:  0px;
+		.plus {
+			padding-right: 40px;
+			padding-bottom: 25px;
+		}
+		li{
+			text-align: left;
+		}
+		.point {
+			padding: 15px 0 25px 15px;
+			img {
+				padding-right: 15px;
+			}
+			&:hover,
+			&:focus {
+				color: $aquamarine;
+			}
+		}
+		a:after {
+			content: attr(data-alt);
+		}
+		@include span-columns(3, 'block-collapse');
+	}
+	@include media($robb) {
+		.plus {
+			display: none;
+		}
+	}
 }
 .border {
 	text-align: left;
+	color: $dove;
+	@include media($sansa) { 
+		padding-top: 15px;
+	}
+}
+
+.current {
+	color: $aquamarine;
 }
 
 //main content styling
-main {
+.courses-main-wrap {
 	@include row();
+	padding-top: 7%;
 	h2 {
 		margin-bottom: 40px;
 	}
 }
 .courses-content{
 	@include span-columns(10, 'block-collapse');
+	@include media($sansa) { 
+		@include span-columns(9, 'block-collapse');
+		@include pad(0 4.35765% 0 0);
+	}
 }
 .breadcrumb {
 	font-size: 16px;
@@ -53,6 +96,16 @@ main {
 }
 .prof-info {
 	margin: 30px 0;
+	@include media($robb) {
+		margin-top: 3.88em;
+		padding-left: 6%;
+		@include span-columns(4 of 9, 'block');
+	}
+}
+.courses-wrap {
+	@include media($robb) {
+		@include span-columns(5 of 9);
+	}
 }
 
 //footer
@@ -68,6 +121,7 @@ footer {
 
 .footer-wrap {
 	position: absolute;
+	width: 100%;
 	left: 0;
 	bottom: 10px;
 }
@@ -77,10 +131,22 @@ footer {
 	display: block;
 	margin-top: 20px;
 	@include span-columns(2, 'block-collapse');
+	@include media($sansa) {
+		@include span-columns(1, 'block-collapse');
+		margin-top: 4px;
+	}
 }
 
 .footer-content {
 	color: $coala;
 	font-weight: 100;
 	@include span-columns(10, 'block-collapse');
+	@include media($sansa) {
+		p {
+			float: left;
+			small {
+				font-size: $base;
+			}
+		}
+	}
 }
