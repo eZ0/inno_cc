@@ -110,6 +110,108 @@ a {
   .links p {
     line-height: 21px; }
 
+.modal-open {
+  overflow: hidden; }
+
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0; }
+  .modal.fade .modal-dialog {
+    -webkit-transform: translate3d(0, -25%, 0);
+    transform: translate3d(0, -25%, 0);
+    transition: 0.3s ease-out; }
+  .modal.in .modal-dialog {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px; }
+
+.modal-content {
+  position: relative;
+  background-clip: padding-box;
+  outline: 0; }
+  .modal-content h1, .modal-content .xs {
+    text-align: center; }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #fff; }
+  .modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  .modal-backdrop.in {
+    opacity: 0.96;
+    filter: alpha(opacity=96); }
+
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #747474;
+  min-height: 39px; }
+
+.modal-header .close {
+  margin-top: -2px; }
+
+.modal-title {
+  margin: 0;
+  line-height: 24px; }
+
+.modal-body {
+  position: relative; }
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #747474; }
+  .modal-footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .modal-footer .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0; }
+  .modal-footer .btn-group .btn + .btn {
+    margin-left: -1px; }
+  .modal-footer .btn-block + .btn-block {
+    margin-left: 0; }
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll; }
+
+@media (min-width: 480px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto; }
+  .modal-sm {
+    width: 300px; } }
+
+@media (min-width: 1040px) {
+  .modal-lg {
+    width: 900px; } }
+
 .top-bar {
   height: 100px; }
   .top-bar ul {
@@ -300,6 +402,60 @@ img:after {
 .link:hover .arrow_green {
   display: inline-block; }
 
+.modal-dialog {
+  width: 100%; }
+
+.modal .aside-nav {
+  text-align: left;
+  float: left;
+  display: block;
+  width: 100%; }
+  .modal .aside-nav a:after {
+    content: attr(data-alt); }
+  .modal .aside-nav .point {
+    padding: 10px 0 5px 7.5%;
+    font-size: 13px; }
+    .modal .aside-nav .point img {
+      padding-right: 7.5%; }
+    .modal .aside-nav .point:hover, .modal .aside-nav .point:focus {
+      color: #199b8c; }
+    @media screen and (min-width: 768px) {
+      .modal .aside-nav .point {
+        font-size: 16px;
+        padding: 10px 0 5px 2.2%; } }
+  @media screen and (min-width: 768px) {
+    .modal .aside-nav li {
+      float: left;
+      display: block;
+      width: 100%; }
+      .modal .aside-nav li:last-child {
+        width: 100%; } }
+  @media screen and (min-width: 768px) {
+    .modal .aside-nav a {
+      float: left;
+      display: block;
+      width: 25%; }
+      .modal .aside-nav a:last-child {
+        width: 25%; } }
+  .modal .aside-nav p {
+    padding: 0 0 0 9%;
+    font-size: 16px; }
+    @media screen and (min-width: 768px) {
+      .modal .aside-nav p {
+        display: inline;
+        padding: 0;
+        float: left;
+        display: block;
+        width: 75%; }
+        .modal .aside-nav p:last-child {
+          width: 75%; } }
+  .modal .aside-nav:last-child {
+    width: 100%; }
+
+.close {
+  cursor: pointer;
+  padding: 7em 0 1.5em 2.45em; }
+
 .aside-nav {
   text-align: center;
   color: #a2a2a2;
@@ -336,6 +492,13 @@ img:after {
   @media screen and (min-width: 960px) {
     .aside-nav .plus {
       display: none; } }
+  @media screen and (min-width: 1140px) {
+    .aside-nav {
+      float: left;
+      display: block;
+      width: 16.66667%; }
+      .aside-nav:last-child {
+        width: 16.66667%; } }
 
 .border {
   text-align: left;
@@ -371,6 +534,13 @@ img:after {
       padding: 0 4.35765% 0 0; }
       .courses-content:last-child {
         width: 75%; } }
+  @media screen and (min-width: 1140px) {
+    .courses-content {
+      float: left;
+      display: block;
+      width: 83.33333%; }
+      .courses-content:last-child {
+        width: 83.33333%; } }
 
 .breadcrumb {
   font-size: 16px;

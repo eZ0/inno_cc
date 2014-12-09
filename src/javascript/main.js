@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
+
     //1. set ul width 
     //2. image when click prev/next button
     var ul;

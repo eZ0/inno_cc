@@ -1,7 +1,58 @@
-//specific styleshees for courses page
+// specific styleshees for courses page
+// modal navigation window styling
+.modal-dialog {
+	width: 100%;
+}
+.modal {
+	.aside-nav {
+		text-align: left;
+		a:after {
+			content: attr(data-alt);
+		}
+		.point{
+			padding: 10px 0 5px 7.5%;
+			font-size: $p;
+			img {
+				padding-right: 7.5%;
+			}
+			&:hover,
+			&:focus {
+				color: $aquamarine;
+			}
+			@include media($sansa) { 
+				font-size: $base;
+				padding: 10px 0 5px 2.2%;
+			}
+		}
+		li {
+			@include media($sansa) { 
+				@include span-columns(12 of 12, 'block-collapse');
+			}
+		}
+		a {
+			@include media($sansa) { 
+				@include span-columns(3 of 12, 'block-collapse');
+			}
+		}
+		p {
+			padding: 0 0 0 9%;
+			font-size: $base;
+			@include media($sansa) { 
+				display: inline;
+				padding: 0;
+				@include span-columns(9 of 12, 'block-collapse');
+			}
+		}
+		@include span-columns(12, 'block-collapse');
+	}
+}
 
+.close {
+	cursor: pointer;
+	padding: 7em 0 1.5em 2.45em;
+}
 
-//aside navigation styles
+// aside navigation styles
 .aside-nav {
 	text-align: center;
 	color: $coala;
@@ -40,6 +91,9 @@
 			display: none;
 		}
 	}
+	@include media($catelyn) {
+		@include span-columns(2, 'block-collapse');
+	}
 }
 .border {
 	text-align: left;
@@ -66,6 +120,9 @@
 	@include media($sansa) { 
 		@include span-columns(9, 'block-collapse');
 		@include pad(0 4.35765% 0 0);
+	}
+	@include media($catelyn) {
+		@include span-columns(10, 'block-collapse');
 	}
 }
 .breadcrumb {

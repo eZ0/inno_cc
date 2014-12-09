@@ -42,9 +42,35 @@
       	</nav>
       </header>
       <main class="courses-main-wrap">
+      	<!-- Modal window for side nav -->
+      	<div class="modal fade" id="sidemenu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      		<div class="modal-dialog">
+      			<div class="modal-content">
+      				<div class="aside-nav">
+      					<div class="close">
+      						<a  data-dismiss="modal"><img src="assets/images/close.png"></a>
+      					</div>
+      					<ul>
+      						<li class="border"><a href="#" data-alt="1st year"><img src="assets/images/border.png"></a></li>
+      						<li class="point current"><a href="#" data-alt="Module 1"><img src="assets/images/el_green.png"></a><p>ICT strategy & Masterplan</p></li>
+      						<li class="point"><a href="#" data-alt="Capita Selecta 1"><img src="assets/images/el_gray.png"></a><p>Development of Research Topics & Communication Practices</p></li>
+      						<li class="point"><a href="#" data-alt="Module 2"><img src="assets/images/el_gray.png"></a><p>Bussiness Architecture & Modelling</p></li>
+      						<li class="point"><a href="#" data-alt="Module 3"><img src="assets/images/el_gray.png"></a><p>Software & Application Architecture</p></li>
+      						<li class="point"><a href="#" data-alt="Module 4"><img src="assets/images/el_gray.png"></a><p>Technical Architecture & Infrastructure</p></li>
+      						<li class="point"><a href="#" data-alt="Capita Selecta 2"><img src="assets/images/el_gray.png"></a><p>Project & Process Management</p></li>
+      						<li class="border"><a href="#" data-alt="2nd year"><img src="assets/images/border.png"></a></li>
+      						<li class="point"><a href="#" data-alt="Module 5"><img src="assets/images/el_gray.png"></a><p>Enterprise Governance of ICT</p></li>
+      						<li class="border"><a href="#" data-alt="3rd year"><img src="assets/images/border.png"></a></li>
+      						<li class="point"><a href="#" data-alt="Ceremony"><img src="assets/images/el_gray.png"></a><p>6 Completion of Master Thesis and Promotion Ceremony</p></li>
+      					</ul>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      	<!-- End Modal Window -->
       	<div class="aside-nav">
       		<div class="plus">
-      			<img class="" src="assets/images/plus.png">
+      			<img data-toggle="modal" data-target="#sidemenu" class="" src="assets/images/plus.png">
       			<p>Open</p>
       		</div>
       		<ul>
@@ -62,21 +88,21 @@
       		</ul>
       	</div>
       	<div class="courses-content">
-	      		<h2>Courses</h2>
-	      		<div class="breadcrumb">
-	      			<div class="link-arrow">
-	      				<img class="arrow_small" src="assets/images/arrow_small.svg">
-	      				<img class="arrow_green" src="assets/images/arrow_green.png">
-	      			</div>
-	      			<div class="link-text">
-	      				<p><strong>Master</strong> <span class="sub-category">Seminars</span></p>
-	      			</div>
-	      		</div>
-	      	<div class="courses-wrap">
-	      		<div class="course-info">
-	      			<h3>ICT Strategy & Masterplan</h3>
-	      			<p>Introduction to enterprise architecture, standard EA frameworks and methods, business strategy, organisation theories, from business strategy to ICT masterplan, organisational change and communication.</p>
-	      		</div>
+      		<h2>Courses</h2>
+      		<div class="breadcrumb">
+      			<div class="link-arrow">
+      				<img class="arrow_small" src="assets/images/arrow_small.svg">
+      				<img class="arrow_green" src="assets/images/arrow_green.png">
+      			</div>
+      			<div class="link-text">
+      				<p><strong>Master</strong> <span class="sub-category">Seminars</span></p>
+      			</div>
+      		</div>
+      		<div class="courses-wrap">
+      			<div class="course-info">
+      				<h3>ICT Strategy & Masterplan</h3>
+      				<p>Introduction to enterprise architecture, standard EA frameworks and methods, business strategy, organisation theories, from business strategy to ICT masterplan, organisational change and communication.</p>
+      			</div>
       		</div>
       		<div class="prof-info">
       			<h4>Prof. Dr. Aimé Heene</h4>
