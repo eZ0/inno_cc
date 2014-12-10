@@ -1,7 +1,10 @@
 // styles for home page only 
 .image-group{
-    	overflow:hidden;
+    	overflow: hidden;
     	position: relative;
+    	// @include media($sansa) {
+    	// 	height: 520px;
+    	// }
 }
 .header-img {
 	background-image: url("../images/h_man.png");
@@ -10,6 +13,12 @@
 	background-color: $mice;
 	background-size: 160%;
 	height: 320px;
+	@include media($sansa) {
+		background-size: 100%;
+		height: 420px;
+		left: 0;
+		top: 0;
+	}
 }
 
 .header-text {
@@ -21,10 +30,25 @@
 		font-size: $h3;
 		line-height: $h3;
 		padding: 0 10%;
+		@include media($sansa) {
+			font-size: $h2;
+			line-height: $h2;
+			padding: 0;
+		}
 	}
 	p {
 		font-size: $p;
 		padding: 0.66% 6.666% 1.66% 6.666%;
+		@include media($sansa) {
+			padding: 0;
+		}
+	}
+	@include media($sansa) {
+		text-align: left;
+		width: 410px;
+		left: 0;
+		top: 38%;
+		position: absolute;
 	}
 }
 
@@ -42,28 +66,31 @@
 		p {
 			color: $timberwolf;
 			.arrow_small {
-				//display: inline-block;
+				@include media($sansa) {
+					display: inline-block;
+				}
 			}
 		}
 	}
+	.arrow_down {
+		display: inline-block;
+		@include media($sansa) {
+			display: none;
+		}
+	}
 }
+
 
 /*********Links********/
 .content {
 	@include pad(0 2.35765% 0 2.35765%);
 }
 
+.wrap-links {
+	max-width: 420px;
+}
+
 .links {
-	// @include media($robb) {
-	// 	@include span-columns(3);
-	// 	margin: 80px 0 0 0;
-	// }
-	// width:100%;
-	// margin: 0;
-	// .link {
-	// 	float: right;
-	// 	margin-right: 2.3em;
-	// }
 	margin: 0 6.666% 8% 6.666%;
 }
 
@@ -71,6 +98,9 @@
 	padding: 15px;
 	.link-arrow {
 		margin: 3% 0 3% 3.66%; 
+		@include media($bran) {
+			margin: 1% 0 1% 3.66%; 
+		}
 		.arrow_green{
 			display: none;
 		}
