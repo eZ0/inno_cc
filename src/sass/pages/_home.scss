@@ -49,6 +49,10 @@
 }
 
 /*********Links********/
+.content {
+	@include pad(0 2.35765% 0 2.35765%);
+}
+
 .links {
 	@include media($robb) {
 		@include span-columns(3);

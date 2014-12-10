@@ -1,7 +1,7 @@
 /*********Slider*******/
 .slider-wrap {
 	width: 340px;
-	height: 505px;
+	height: 430px;
 	overflow: hidden;
 }
 .slider {
@@ -11,16 +11,25 @@
 	transition: left .5s ease-in-out;
 	li {
 		width: 340px;
-		height: 505px;
+		height: 430px;
 		float: left;
 		white-space: normal;
 	}
 }
 
-
+.slider-container {
+	padding: 0 10%;
+}
+.wrap-slider-container {
+	max-width: 420px;
+	position: relative;
+}
 
 // typography
 .text {
+	h4 {
+		text-align: center;
+	}
 	&:hover,
 	&:focus {
 		h4 {
@@ -40,9 +49,17 @@
 }
 
 .slide-arrow {
-	width: 30px;
-	height: 30px;
-	//margin: 150px 20px 50px 20px;
+	position: absolute;
+	width: 12px;
+	height: 20px;
+	margin-top: 14%;
 }
 
+#prev {
+	left: 0px;
+
+}
+#next {
+	right: 0px;
+}
 
