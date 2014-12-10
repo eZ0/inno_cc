@@ -292,11 +292,13 @@ li#menu-icon.toggle-topbar.menu-icon, li#search-icon.toggle-topbar.search-icon {
   padding: 0 10% 10% 10%; }
 
 .wrap-slider-container {
+  text-align: center;
   max-width: 420px;
   position: relative; }
 
 .text {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  text-align: left; }
 
 .image {
   width: 370px;
@@ -314,6 +316,8 @@ li#menu-icon.toggle-topbar.menu-icon, li#search-icon.toggle-topbar.search-icon {
     padding: 4px;
     border-radius: 50%;
     margin: 0 10px; }
+    .slider-bullets .slider-bullet:hover, .slider-bullets .slider-bullet:focus {
+      background-color: #199b8c; }
 
 .text h4 {
   text-align: center;
@@ -382,27 +386,12 @@ li#menu-icon.toggle-topbar.menu-icon, li#search-icon.toggle-topbar.search-icon {
   padding: 0 2.35765% 0 2.35765%; }
 
 .links {
-  width: 100%;
-  margin: 0; }
-  @media screen and (min-width: 960px) {
-    .links {
-      float: left;
-      display: block;
-      margin-right: 0%;
-      width: 25%;
-      margin: 80px 0 0 0; }
-      .links:last-child {
-        margin-right: 0; } }
-  .links .link {
-    float: right;
-    margin-right: 2.3em; }
+  margin: 0 6.666% 8% 6.666%; }
 
 .link {
-  max-width: 260px;
-  padding-bottom: 16px; }
+  padding: 15px; }
   .link .link-arrow {
-    float: right;
-    margin: 15px 0 10px 40px; }
+    margin: 3% 0 3% 3.66%; }
     .link .link-arrow .arrow_green {
       display: none; }
 

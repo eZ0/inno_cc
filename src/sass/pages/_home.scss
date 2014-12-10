@@ -54,30 +54,30 @@
 }
 
 .links {
-	@include media($robb) {
-		@include span-columns(3);
-		margin: 80px 0 0 0;
-	}
-	width:100%;
-	margin: 0;
-	.link {
-		float: right;
-		margin-right: 2.3em;
-	}
+	// @include media($robb) {
+	// 	@include span-columns(3);
+	// 	margin: 80px 0 0 0;
+	// }
+	// width:100%;
+	// margin: 0;
+	// .link {
+	// 	float: right;
+	// 	margin-right: 2.3em;
+	// }
+	margin: 0 6.666% 8% 6.666%;
 }
 
 .link {
-	max-width: 260px;
-	padding-bottom: 16px;
+	padding: 15px;
 	.link-arrow {
-		@include right;
-		margin: 15px 0 10px 40px;
+		margin: 3% 0 3% 3.66%; 
 		.arrow_green{
 			display: none;
 		}
 	}
 }
 
+// links hover effects & typography
 .links {
 	&:hover{
 		p,strong {
