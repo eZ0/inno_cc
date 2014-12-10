@@ -1,36 +1,25 @@
 /*********Slider*******/
-.content {
-	@include pad(0 4%);
-	@include row();
+.slider-wrap {
+	width: 340px;
+	height: 505px;
+	overflow: hidden;
 }
-
-img {
-	@include clearfix;
-}
-
 .slider {
-	@include media($robb) {
-		@include span-columns(9);
-		max-width: 992px;	
+	width: 1300px;
+	position: relative;
+	left: 0px;
+	transition: left .5s ease-in-out;
+	li {
+		width: 340px;
+		height: 505px;
+		float: left;
+		white-space: normal;
 	}
-	.image {
-		//@include span-columns(3 of 9);
-		margin: 30px 30px 0 0;
-		@include left;
-	}
-	.text {
-		//@include span-columns(4 of 9);
-		padding: 70px 20px 0 20px;
-		@include clearfix;
-	}
-	.flip {
-		transform: scaleX(-1);
-        	filter: FlipH;	
-	}
-	width: 100%;
-	//max-width: 992px;	
 }
 
+
+
+// typography
 .text {
 	&:hover,
 	&:focus {
@@ -44,28 +33,16 @@ img {
 	
 }
 
+// arrows
+.flip {
+	transform: scaleX(-1);
+      filter: FlipH;	
+}
+
 .slide-arrow {
 	width: 30px;
 	height: 30px;
-	margin: 150px 20px 50px 20px;
+	//margin: 150px 20px 50px 20px;
 }
 
-.right {
-	@include right;
-} 
 
-.slider-content {
-	overflow: hidden;
-	position: relative;
-	height: 311px;
-	#slider {
-		position: relative;
-		overflow: hidden;
-		float: left;
-		width: auto !important;
-		li {
-			position: relative;
-			float: left;
-		}
-	}
-}
