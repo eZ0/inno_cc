@@ -1,4 +1,4 @@
-# Webapp bootstrap
+Web Dev project from Content Cowboys. Using SASS, Bourbon, Neat, gulp.  
 
 ## prerequisites
 
