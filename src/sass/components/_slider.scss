@@ -1,0 +1,71 @@
+/*********Slider*******/
+.content {
+	@include pad(0 4%);
+	@include row();
+}
+
+img {
+	@include clearfix;
+}
+
+.slider {
+	@include media($robb) {
+		@include span-columns(9);
+		max-width: 992px;	
+	}
+	.image {
+		//@include span-columns(3 of 9);
+		margin: 30px 30px 0 0;
+		@include left;
+	}
+	.text {
+		//@include span-columns(4 of 9);
+		padding: 70px 20px 0 20px;
+		@include clearfix;
+	}
+	.flip {
+		transform: scaleX(-1);
+        	filter: FlipH;	
+	}
+	width: 100%;
+	//max-width: 992px;	
+}
+
+.text {
+	&:hover,
+	&:focus {
+		h4 {
+			color: $aquamarine;
+		}
+		p {
+			color: $timberwolf;
+		}
+	}
+	
+}
+
+.slide-arrow {
+	width: 30px;
+	height: 30px;
+	margin: 150px 20px 50px 20px;
+}
+
+.right {
+	@include right;
+} 
+
+.slider-content {
+	overflow: hidden;
+	position: relative;
+	height: 311px;
+	#slider {
+		position: relative;
+		overflow: hidden;
+		float: left;
+		width: auto !important;
+		li {
+			position: relative;
+			float: left;
+		}
+	}
+}

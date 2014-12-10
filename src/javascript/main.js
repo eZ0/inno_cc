@@ -22,8 +22,8 @@ $( document ).ready(function() {
     	prev = document.getElementById("prev");
     	next = document.getElementById("next");
 
-    	prev.onclick = function(){ onClickPrev();};
-    	next.onclick = function(){ onClickNext();};
+    	//prev.onclick = function(){ onClickPrev();};
+    	//next.onclick = function(){ onClickNext();};
     }
 
     function animate(opts){
