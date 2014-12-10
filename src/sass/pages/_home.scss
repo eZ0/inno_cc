@@ -2,9 +2,6 @@
 .image-group{
     	overflow: hidden;
     	position: relative;
-    	// @include media($sansa) {
-    	// 	height: 520px;
-    	// }
 }
 .header-img {
 	background-image: url("../images/h_man.png");
@@ -18,6 +15,9 @@
 		height: 420px;
 		left: 0;
 		top: 0;
+	}
+	@include media($robb) {
+		height: 520px;
 	}
 }
 
@@ -35,6 +35,10 @@
 			line-height: $h2;
 			padding: 0;
 		}
+		@include media($robb) {
+			font-size: $h1;
+			line-height: $h1;
+		}
 	}
 	p {
 		font-size: $p;
@@ -42,13 +46,27 @@
 		@include media($sansa) {
 			padding: 0;
 		}
+		@include media($robb) {
+			font-size: $base;
+		}
+
 	}
 	@include media($sansa) {
 		text-align: left;
-		width: 410px;
+		width: 50%;
+		max-width: 500px;
 		left: 0;
 		top: 38%;
 		position: absolute;
+	}
+	@include media($robb) {
+		width: 70%;
+		max-width: 600px;
+		top: 30%;
+	}
+	@include media($catelyn) {
+		top: 24%;
+		max-width: 660px;
 	}
 }
 
@@ -84,14 +102,39 @@
 /*********Links********/
 .content {
 	@include pad(0 2.35765% 0 2.35765%);
+	@include media($robb) {
+		@include row();
+		margin: 0;
+	}
+	@include media($catelyn) {
+		margin-left: 12%;
+	}
 }
 
 .wrap-links {
 	max-width: 420px;
+	@include media($sansa) {
+		max-width: 100%;
+	}
+	@include media($robb) {
+		@include span-columns(6, 'block');
+		max-width: 220px;
+	}
+	@include media($catelyn) {
+		@include span-columns(4, 'block');
+		max-width: 270px;
+	}
 }
 
 .links {
 	margin: 0 6.666% 8% 6.666%;
+	@include media($sansa) {
+		margin: 0;
+		@include row();
+	}
+	@include media($robb) {
+		margin: 50px 0 0 20px;
+	}
 }
 
 .link {
@@ -101,9 +144,19 @@
 		@include media($bran) {
 			margin: 1% 0 1% 3.66%; 
 		}
+		@include media($sansa) {
+			margin: 5% 0 5% 3.66%; 
+		}
 		.arrow_green{
 			display: none;
 		}
+	}
+	@include media($sansa) {
+		min-width: 276px;
+		@include span-columns(4, 'block');
+	}
+	@include media($robb) {
+		width: 80%;
 	}
 }
 

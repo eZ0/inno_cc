@@ -3,6 +3,10 @@
 	width: 340px;
 	height: 430px;
 	overflow: hidden;
+	@include media($sansa) {
+		width: 680px;
+		height: 215px;
+	}
 }
 .slider {
 	width: 1300px;
@@ -14,27 +18,58 @@
 		height: 430px;
 		float: left;
 		white-space: normal;
+		@include media($sansa) {
+			width: 680px;
+			height: 215px;
+		}
+	}
+	@include media($sansa) {
+		width: 2040px;
 	}
 }
 
 .slider-container {
 	padding: 0 10% 10% 10%;
+	@include media($sansa) {
+		padding: 6% 10% 6% 3%;
+	}
 }
 .wrap-slider-container {
 	text-align: center;
 	max-width: 420px;
 	position: relative;
+	@include media($sansa) {
+		max-width: 840px;
+		min-width: 700px;
+	}
+	@include media($robb) {
+		@include span-columns(5, 'block');
+	}
 }
 
 // Slider content
 .text {
 	margin-bottom: 20px; 
 	text-align: left;
+	@include media($sansa) {
+		width: 60%;
+		float: right;
+		padding: 20px;
+	}
 }
 .image {
 	width: 370px;
 	height: 260px;
-	background-color: $mice; 
+	background-color: $mice;
+	img {
+		width: 210px;
+	}
+	@include media($sansa) {
+		width: 250px;
+		height: 180px;
+		width: 40%;
+		float: left;
+	} 
 }
 
 
@@ -43,6 +78,9 @@
 	text-align: center;
 	ul {
 		display: inline-block;
+		@include media($sansa) {
+			display: none;
+		}
 	}
 	.slider-bullet{
 		float:right;
@@ -63,9 +101,15 @@
 	h4 {
 		text-align: center;
 		line-height: $h2;
+		@include media($sansa) {
+			text-align: left;
+		}
 	}
 	p {
 		font-size: $p;
+		@include media($robb) {
+			font-size: $base;
+		}
 	}
 	&:hover,
 	&:focus {
@@ -90,6 +134,9 @@
 	width: 12px;
 	height: 20px;
 	margin-top: 16%;
+	@include media($sansa) {
+		margin-top: 10%;
+	}
 }
 
 #prev {
