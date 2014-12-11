@@ -79,7 +79,7 @@ gulp.task('scripts', function () {
     return gulp.src([
         'src/javascript/vendors/**/*.js',
         'src/javascript/partials/**/*.js',
-        'src/javascript/*.js',
+        //'src/javascript/*.js',
         'src/javascript/main.js'
     ])
         .pipe(plumber())
