@@ -33,36 +33,48 @@
 	height: auto;
 	@include media($sansa) {
 		padding: 30px 0px;
+	}
+	@include media($robb) {
 		margin: 0 40px;
-		width: auto;
-		height: auto;
 	}
 }
 
 .logo-group {
 	padding: 30px 0px 0px 0px;
 	margin: 0 40px;
+	@include media($sansa) {
+		padding: 0px;
+	}
 }
 
 .menu-group {
 	display: none;
 	position: relative;
       width: 100%;
+      @include media($sansa) {
+      	max-height: 150px; 
+      }
+      @include media($robb) {
+		display: block;
+		width: auto !important;
+	}
 	li {
 		float: none !important;
 		text-align: right;
 		margin: 10px 84px 30px 0px;
+		@include media($sansa) {
+			float: left !important;
+			margin: 3% 0% 0 3.666%;
+		}
+		@include media($robb) {
+			margin: 0;
+		}
 	}
 	li:nth-of-type(8){
 		display: none;
 		@include media($robb) {
 			display: inline-block;
 		}
-	}
-	@include media($robb) {
-		display: block;
-		position: relative;
-		width: auto !important;
 	}
 	ul {
 		background-color: $white;
@@ -76,7 +88,10 @@
 		top: 69px;
 		@include media($robb) {
 			padding: 16px 0; 
-			//position: relative;
+			position: relative;
+			top: 0;
+			float: right;
+			width: auto;
 		}
 	}
 }
@@ -87,10 +102,30 @@
 	li:nth-of-type(4){
 		&:hover,
 		&:focus{
-			margin-top: -15px;
+			margin-top: 15px;
 			.sub_item{
 				display: block;
-				margin-top: 15px;
+				margin-top: -15px;
+			}
+		}
+			@include media($sansa) {
+				&:hover,
+				&:focus{
+					margin-top: 15px;
+				.sub_item{
+					display: block;
+					margin-top: 15px;
+				}
+			}
+		}
+		@include media($robb) {
+				&:hover,
+				&:focus{
+					margin-top: -15px;
+				.sub_item{
+					display: block;
+					margin-top: 15px;
+				}
 			}
 		}
 	}
@@ -109,6 +144,9 @@
 .close-icon{
 	display: none;
 	padding-top: 14px;
+	@include media($robb) {
+		display: none !important;
+	}
 }
 
 

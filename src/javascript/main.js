@@ -39,7 +39,6 @@ var changeClass = function(r, className1, className2) {
 	return r.className;
 };
 
-
 	// document.getElementById('menu-icon').onclick = function() {
 	// 	changeClass(this, 'toggle-topbar menu-icon active', 'toggle-topbar menu-icon');
 	// 	changeDisplayAttribute();
@@ -50,6 +49,7 @@ var changeClass = function(r, className1, className2) {
    	var el = document.getElementById('menu');
    	var close_icon = document.getElementById('close-icon');
    	var menu_icon =  document.getElementById('menu-icon');
+
     	menu_icon.onclick = function() {
       if( toggled ) {
         	el.style.height = "1500px";
