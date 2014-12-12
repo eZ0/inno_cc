@@ -38,6 +38,7 @@
 	text-align: center;
 	max-width: 420px;
 	position: relative;
+	margin: 0 auto;
 	@include media($sansa) {
 		max-width: 840px;
 		min-width: 700px;
