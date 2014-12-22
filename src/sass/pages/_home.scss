@@ -113,6 +113,8 @@
 
 .wrap-links {
 	max-width: 420px;
+	position: relative;
+	margin: 0 auto;
 	@include media($sansa) {
 		max-width: 100%;
 	}

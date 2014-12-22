@@ -299,39 +299,35 @@ a {
         width: auto; } }
 
 /*********Hover*********/
-.top-bar li:nth-of-type(4):hover, .top-bar li:nth-of-type(4):focus {
+.top-bar .item:hover, .top-bar .item:focus {
   margin-top: 15px; }
-  .top-bar li:nth-of-type(4):hover .sub_item, .top-bar li:nth-of-type(4):focus .sub_item {
+  .top-bar .item:hover .sub_item, .top-bar .item:focus .sub_item {
     display: block;
     margin-top: -15px; }
 @media screen and (min-width: 768px) {
-  .top-bar li:nth-of-type(4):hover, .top-bar li:nth-of-type(4):focus {
+  .top-bar .item:hover, .top-bar .item:focus {
     margin-top: 15px; }
-    .top-bar li:nth-of-type(4):hover .sub_item, .top-bar li:nth-of-type(4):focus .sub_item {
+    .top-bar .item:hover .sub_item, .top-bar .item:focus .sub_item {
       display: block;
       margin-top: 15px; } }
 @media screen and (min-width: 960px) {
-  .top-bar li:nth-of-type(4):hover, .top-bar li:nth-of-type(4):focus {
+  .top-bar .item:hover, .top-bar .item:focus {
     margin-top: -15px; }
-    .top-bar li:nth-of-type(4):hover .sub_item, .top-bar li:nth-of-type(4):focus .sub_item {
+    .top-bar .item:hover .sub_item, .top-bar .item:focus .sub_item {
       display: block;
       margin-top: 15px; } }
 
 /********MENU_ICON*********/
-.toggle-topbar.menu-icon, .toggle-topbar.search-icon {
+.toggle-topbar.menu-icon, .toggle-topbar.search-icon, .toggle-topbar.close-icon {
   display: inline-block;
   padding-top: 16px;
   float: right; }
   @media screen and (min-width: 960px) {
-    .toggle-topbar.menu-icon, .toggle-topbar.search-icon {
+    .toggle-topbar.menu-icon, .toggle-topbar.search-icon, .toggle-topbar.close-icon {
       display: none; } }
 
-.close-icon {
-  display: none;
-  padding-top: 14px; }
-  @media screen and (min-width: 960px) {
-    .close-icon {
-      display: none !important; } }
+.toggle-topbar.close-icon {
+  display: none; }
 
 /*********Slider*******/
 .slider-wrap {
@@ -560,7 +556,9 @@ a {
       margin-left: 12%; } }
 
 .wrap-links {
-  max-width: 420px; }
+  max-width: 420px;
+  position: relative;
+  margin: 0 auto; }
   @media screen and (min-width: 768px) {
     .wrap-links {
       max-width: 100%; } }

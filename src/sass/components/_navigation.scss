@@ -101,7 +101,8 @@
 
 /*********Hover*********/
 .top-bar {
-	li:nth-of-type(4){
+	// li:nth-of-type(4)
+	.item{
 		&:hover,
 		&:focus{
 			margin-top: 15px;
@@ -110,10 +111,10 @@
 				margin-top: -15px;
 			}
 		}
-			@include media($sansa) {
-				&:hover,
-				&:focus{
-					margin-top: 15px;
+		@include media($sansa) {
+			&:hover,
+			&:focus{
+				margin-top: 15px;
 				.sub_item{
 					display: block;
 					margin-top: 15px;
@@ -121,9 +122,9 @@
 			}
 		}
 		@include media($robb) {
-				&:hover,
-				&:focus{
-					margin-top: -15px;
+			&:hover,
+			&:focus{
+				margin-top: -15px;
 				.sub_item{
 					display: block;
 					margin-top: 15px;
@@ -135,7 +136,8 @@
 
 /********MENU_ICON*********/
 .toggle-topbar.menu-icon,
-.toggle-topbar.search-icon{
+.toggle-topbar.search-icon,
+.toggle-topbar.close-icon{
 	display: inline-block;
 	padding-top: 16px;
 	float: right;
@@ -143,12 +145,13 @@
 		display: none;
 	}
 }
-.close-icon{
-	display: none;
-	padding-top: 14px;
-	@include media($robb) {
-		display: none !important;
-	}
+.toggle-topbar.close-icon{
+	display:none;
+	//display: none;
+	// padding-top: 14px;
+	// @include media($robb) {
+	// 	display: none !important;
+	// }
 }
 
 
