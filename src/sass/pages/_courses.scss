@@ -19,9 +19,6 @@
 		.point{
 			padding: 10px 0 5px 7.5%;
 			font-size: $p;
-			img {
-				padding-right: 7.5%;
-			}
 			&:hover,
 			&:focus {
 				color: $aquamarine;
@@ -45,9 +42,10 @@
 			padding: 0 0 0 9%;
 			font-size: $base;
 			@include media($sansa) { 
+				float: none !important;
 				display: inline;
 				padding: 0;
-				@include span-columns(9 of 12, 'block-collapse');
+				@include span-columns(12 of 12, 'block-collapse');
 			}
 		}
 		@include span-columns(12, 'block-collapse');
@@ -73,6 +71,18 @@
 	margin-top: 18px;
 	li {
 		margin: 5px 0;
+		.bullet {
+			background-color: $coala;
+			margin: 15px 35px;
+			float: left;
+			&:hover,
+			&:focus {
+				background-color: $aquamarine;
+			}
+			@include media($sansa) {
+				margin: 3px 20px 0 10px;
+			}
+		}
 	}
 	@include span-columns(2, 'block-collapse');
 	@include media($sansa) {
@@ -86,9 +96,6 @@
 		}
 		.point {
 			padding: 15px 0 25px 15px;
-			img {
-				padding-right: 15px;
-			}
 			&:hover,
 			&:focus {
 				color: $aquamarine;
@@ -108,6 +115,14 @@
 		@include span-columns(2, 'block-collapse');
 	}
 }
+
+.plus {
+	&:hover,
+	&:focus {
+		cursor: pointer;
+	}
+}
+
 .border {
 	text-align: left;
 	color: $dove;

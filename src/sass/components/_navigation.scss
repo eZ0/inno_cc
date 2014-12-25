@@ -103,15 +103,15 @@
 .top-bar {
 	// li:nth-of-type(4)
 	.item{
-		&:hover,
-		&:focus{
-			margin-top: 15px;
-			.sub_item{
-				display: block;
-				margin-top: -15px;
-			}
+		.sub_item {
+			display: block;
+			margin: 25px 0px 15px 0px;
 		}
 		@include media($sansa) {
+			.sub_item {
+				display: none;
+				margin: 0px;
+			}
 			&:hover,
 			&:focus{
 				margin-top: 15px;
@@ -147,11 +147,6 @@
 }
 .toggle-topbar.close-icon{
 	display:none;
-	//display: none;
-	// padding-top: 14px;
-	// @include media($robb) {
-	// 	display: none !important;
-	// }
 }
 
 

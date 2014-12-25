@@ -55,7 +55,7 @@
 	@include media($sansa) {
 		width: 60%;
 		float: right;
-		padding: 20px;
+		padding: 0px 20px;
 	}
 }
 .image {
@@ -80,20 +80,24 @@
 	ul {
 		display: inline-block;
 		@include media($sansa) {
-			display: none;
+			position: absolute;
+			top: 215px;
+			left: 305px;
 		}
 	}
-	.slider-bullet{
-		float:right;
-		cursor: pointer;
-            background-color: $coala;
-            padding: 4px;
-            border-radius: 50%;
-            margin: 0 10px;
-            &:hover,
-		&:focus {
-			background-color: $aquamarine;
-		}
+	.bullet {
+		float: right;
+		background-color: $coala;
+		margin: 0 10px;
+	}
+}
+.bullet {
+	cursor: pointer;
+	padding: 4px;
+	border-radius: 50%;
+	&:hover,
+	&:focus {
+		background-color: $aquamarine;
 	}
 }
 
@@ -147,4 +151,5 @@
 #next {
 	right: 0px;
 }
+
 
