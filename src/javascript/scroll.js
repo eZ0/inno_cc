@@ -30,11 +30,8 @@ menuItems.click(function(e){
 	$('li').click(function() {
 		$("li.active").removeClass("active");
 		$(this).closest('li').addClass('active');
-		
-		// $('div.wrap.displayed').removeClass('displayed').fadeOut(1000);
-		// $(href).addClass('displayed').fadeIn(1000);
 	});
-		$('div.wrap.displayed').removeClass('displayed').fadeOut(1000);
+		$('div.wrap.displayed').removeClass('displayed').fadeOut(800).slideUp(300);
 		$(href).addClass('displayed').fadeIn(1000);
 	e.preventDefault();
 });
