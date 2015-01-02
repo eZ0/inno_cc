@@ -54,19 +54,11 @@ $( document ).ready(function() {
 	};
 
 	document.getElementById('aside-nav').onclick = function() {
-		//$('#sidemenu').modal('toggle');
+		$('#sidemenu').modal('toggle');
 	};
 	document.getElementById('sidemenu').onclick = function() {
 		$('#sidemenu').modal('hide');
 	};
-
-
-	$( "#side-menu li" ).hover(
-  		function() { 
-  			//$('#sidemenu').modal('toggle');
-  		}
-  	);
-
 
 });
 
