@@ -25,32 +25,17 @@ var scrollItems = menuItems.map(function(){
 menuItems.click(function(e){
 // find corresponding text item and fade it in
 	var href = $(this).attr("href");
-	
+	var el = $('div[class^="wrap"]').not('href');
 	// toggle menu items active/unactive
 	$('li').click(function() {
 		$("li.active").removeClass("active");
 		$(this).closest('li').addClass('active');
+		
+		// $('div.wrap.displayed').removeClass('displayed').fadeOut(1000);
+		// $(href).addClass('displayed').fadeIn(1000);
 	});
-	
-	//$(this).closest('li').addClass('active');
-
-
-	$(href).fadeIn(1000).slideUp( 1000 ).delay(1000);
-
-	var el = $('div[class^="wrap"]').not('href');
-	$(el).fadeOut(1000);
-
-	//console.log (el);
-	
-
-	// var offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-	// var offsetTop = 100;
-	// $('html, body').stop().animate({ 
-	// 	scrollTop: offsetTop
-	// }, 300);
-
-	//$('li[class^="point"]').addClass('active');
-  
+		$('div.wrap.displayed').removeClass('displayed').fadeOut(1000);
+		$(href).addClass('displayed').fadeIn(1000);
 	e.preventDefault();
 });
 
@@ -73,7 +58,7 @@ $(window).scroll(function(){
    var href = $(this).attr("href");
    id = $(this).attr("href");
 
-   console.log("id " + id);
+  // console.log("id " + id);
 
    if (lastId !== id) {
        lastId = id;
