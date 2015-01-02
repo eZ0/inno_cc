@@ -54,11 +54,19 @@ $( document ).ready(function() {
 	};
 
 	document.getElementById('aside-nav').onclick = function() {
-		$('#sidemenu').modal('toggle');
+		//$('#sidemenu').modal('toggle');
 	};
 	document.getElementById('sidemenu').onclick = function() {
 		$('#sidemenu').modal('hide');
 	};
+
+
+	$( "#side-menu li" ).hover(
+  		function() { 
+  			//$('#sidemenu').modal('toggle');
+  		}
+  	);
+
 
 });
 
@@ -343,8 +351,93 @@ $( document ).ready(function() {
 
 }(jQuery);
 
+// scrollspy for courses page
+
+var item1 = document.getElementById('item1');
+var item2 = document.getElementById('item2');
+var item3 = document.getElementById('item3');
+
+item2.style.display = 'none';
+item3.style.display = 'none';
+
+// Cache selectors
+var lastId;
+var topMenu = $("#side-menu");
+//var topMenuHeight = topMenu.outerHeight()+15;
+var topMenuHeight = 200;
+// All list items
+var menuItems = topMenu.find("a");
+// Anchors corresponding to menu items
+var scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+});
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+// find corresponding text item and fade it in
+	var href = $(this).attr("href");
+	
+	// toggle menu items active/unactive
+	$('li').click(function() {
+		$("li.active").removeClass("active");
+		$(this).closest('li').addClass('active');
+	});
+	
+	//$(this).closest('li').addClass('active');
+
+
+	$(href).fadeIn(1000).slideUp( 1000 ).delay(1000);
+
+	var el = $('div[class^="wrap"]').not('href');
+	$(el).fadeOut(1000);
+
+	//console.log (el);
+	
+
+	// var offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+	// var offsetTop = 100;
+	// $('html, body').stop().animate({ 
+	// 	scrollTop: offsetTop
+	// }, 300);
+
+	//$('li[class^="point"]').addClass('active');
+  
+	e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+
+   var fromTop = $(this).scrollTop()+topMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+      return this;
+   });
+
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+
+   var href = $(this).attr("href");
+   id = $(this).attr("href");
+
+   console.log("id " + id);
+
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }                   
+});
 function slide(){
-	console.log('wooot');
+	
 	//1. set ul width 
 	//2. image when click prev/next button
 	var ul;
@@ -362,15 +455,10 @@ function slide(){
 		slideNumber = li_items.length;
 		slideWidth = li_items[0].children[0].clientWidth;
 		ul.style.width = parseInt(slideWidth * slideNumber) + 'px';
-
-		console.log(ul.style.width);
 		
 		prev = document.getElementById("prev");
 		next = document.getElementById("next");
-		//.onclike = slide(-1) will be fired when onload;
-		/*
-		prev.onclick = function(){slide(-1);};
-		next.onclick = function(){slide(1);};*/
+
 		prev.onclick = function(){ onClickPrev();};
 		next.onclick = function(){ onClickNext();};
 	}
@@ -390,13 +478,12 @@ function slide(){
 				opts.callback();
 			}
 		}, opts.delay || 17);
-		//return id;
 	}
 
 	function slideTo(slideToGo){
 		var direction;
 		var numOfSlideToGo = Math.abs(slideToGo - currentSlide);
-		// slide toward left
+		// slide left
 
 		direction = currentSlide > slideToGo ? 1 : -1;
 		currentPostion = -1 * currentSlide * slideWidth;

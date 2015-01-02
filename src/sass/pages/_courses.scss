@@ -116,6 +116,15 @@
 	}
 }
 
+.active {
+	.bullet {
+		background-color: $aquamarine;
+	}
+	a {
+		color: $aquamarine;
+	}
+}
+
 .plus {
 	&:hover,
 	&:focus {

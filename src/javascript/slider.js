@@ -1,5 +1,5 @@
 function slide(){
-	console.log('wooot');
+	
 	//1. set ul width 
 	//2. image when click prev/next button
 	var ul;
@@ -17,15 +17,10 @@ function slide(){
 		slideNumber = li_items.length;
 		slideWidth = li_items[0].children[0].clientWidth;
 		ul.style.width = parseInt(slideWidth * slideNumber) + 'px';
-
-		console.log(ul.style.width);
 		
 		prev = document.getElementById("prev");
 		next = document.getElementById("next");
-		//.onclike = slide(-1) will be fired when onload;
-		/*
-		prev.onclick = function(){slide(-1);};
-		next.onclick = function(){slide(1);};*/
+
 		prev.onclick = function(){ onClickPrev();};
 		next.onclick = function(){ onClickNext();};
 	}
@@ -45,13 +40,12 @@ function slide(){
 				opts.callback();
 			}
 		}, opts.delay || 17);
-		//return id;
 	}
 
 	function slideTo(slideToGo){
 		var direction;
 		var numOfSlideToGo = Math.abs(slideToGo - currentSlide);
-		// slide toward left
+		// slide left
 
 		direction = currentSlide > slideToGo ? 1 : -1;
 		currentPostion = -1 * currentSlide * slideWidth;

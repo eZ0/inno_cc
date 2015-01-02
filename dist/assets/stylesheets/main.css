@@ -750,6 +750,11 @@ a {
       .aside-nav:last-child {
         width: 16.66667%; } }
 
+.active .bullet {
+  background-color: #199b8c; }
+.active a {
+  color: #199b8c; }
+
 .plus:hover, .plus:focus {
   cursor: pointer; }
 
